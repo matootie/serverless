@@ -13,7 +13,7 @@ interface Request {
 
 type Wrappable = (req: Request) => Promise<any>
 
-export const wrap = (func: Wrappable): any => {
+export const wrap = (func: Wrappable): Handler<APIGatewayEvent> => {
   const wrapped: Handler<APIGatewayEvent> = async (event, context) => {
     // @ts-expect-error event.source is unique to Lambda warmup trigger.
     if ("source" in event && event.source === "serverless-plugin-warmup") {
