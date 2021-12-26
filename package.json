@@ -6,8 +6,9 @@
     "test": "jest",
     "develop": "nodemon",
     "build": "npm-run-all --serial build:*",
-    "build:bundle": "esbuild --bundle --minify --outfile=dist/handler.ts --platform=node --sourcemap --define:process.env.NODE_ENV=production --tree-shaking=true src/handler.ts",
-    "build:package": "mkdir -p out && zip -d -j out/function.zip dist/handler.ts dist/handler.ts.map"
+    "build:bundle": "esbuild --bundle --minify --outfile=dist/handler.js --platform=node --sourcemap --define:process.env.NODE_ENV=\\\"production\\\" --tree-shaking=true src/handler.ts",
+    "build:package": "mkdir -p out && zip -j out/function.zip dist/handler.js dist/handler.js.map",
+    "deploy": "cdk deploy"
   },
   "nodemonConfig": {
     "ignore": [
