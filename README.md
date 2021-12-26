@@ -2,6 +2,14 @@
 
 This template is a **WORK IN PROGRESS**.
 
+### Features
+
+- ESLint for code lint.
+- Prettier for code formatting.
+- Jest for code testing.
+- GitHub Actions for CI/CD.
+- Docker Compose and VSCode Devcontainers for easy development environment setup.
+
 ### Deploy steps
 
 - Will be automated with GitHub Actions.
