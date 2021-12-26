@@ -1,0 +1,30 @@
+{
+	"name": "Deno",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/source",
+	"extensions": [
+		"denoland.vscode-deno",
+		"mtxr.sqltools",
+		"mtxr.sqltools-driver-pg"
+	],
+	"settings": {
+		"deno.enable": true,
+		"deno.lint": true,
+		"editor.defaultFormatter": "denoland.vscode-deno",
+		"sqltools.connections": [{
+			"name": "Database",
+			"driver": "PostgreSQL",
+			"previewLimit": 50,
+			"server": "postgres",
+			"port": 5432,
+			"database": "postgres",
+			"username": "postgres",
+			"password": "postgres"
+		}]
+	},
+	"remoteUser": "me",
+	"features": {
+		"python": "3.10"
+	}
+}

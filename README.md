@@ -1,1 +1,1 @@
-# Serverless API template
+# Deno application
