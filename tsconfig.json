@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@lib/*": ["lib/*"],
-      "@bin/*": ["bin/*"]
+      "@bin/*": ["bin/*"],
+      "@app": ["src/app"]
     }
   },
   "include": ["src/**/*", "bin/**/*", "lib/**/*.ts", "test/**/*"],

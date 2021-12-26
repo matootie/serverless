@@ -1,9 +1,7 @@
 {
   "app": "npx ts-node -r tsconfig-paths/register --prefer-ts-exts bin/cdk.ts",
   "watch": {
-    "include": [
-      "lib/**/*.ts"
-    ]
+    "include": ["lib/**/*.ts"]
   },
   "context": {
     "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,

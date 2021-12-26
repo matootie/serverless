@@ -13,9 +13,12 @@ This template is a **WORK IN PROGRESS**.
 ### Deploy steps
 
 - Will be automated with GitHub Actions.
-  - Build code to `/dist`.
+  - Bundle code to `/dist`.
+    - `npm run build:bundle`
   - Zip code to `/out/function.zip`.
+    - `npm run build:package`
   - Run CDK.
+    - `cdk deploy`
 
 ### Goals
 

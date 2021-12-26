@@ -18,7 +18,7 @@ export class AppStack extends Stack {
     super(scope, id, props)
 
     // The AWS Lambda function.
-    const handler = new Function(this, "HelloFunction", {
+    const handler = new Function(this, "Function", {
       runtime: Runtime.NODEJS_14_X,
       code: Code.fromAsset(props?.codeZipLocation ?? "out/function.zip"),
       handler: "handler.handler",
