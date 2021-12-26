@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VARIANT: 14-bullseye
+    volumes:
+      - ..:/source:cached
+      - ~/.aws:/home/me/.aws
+    command: sleep infinity
+    user: me
+    hostname: app
+  postgres:
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+volumes:
+  postgres:

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2018",
     "module": "CommonJS",
     "strict": true,
     "esModuleInterop": true,
@@ -9,14 +9,16 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "noImplicitAny": false,
-    "lib": ["ES2015"],
+    "types": ["jest", "node"],
+    "lib": ["ES2018"],
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
-      "@utils/*": ["utils/*"]
+      "@lib/*": ["lib/*"],
+      "@bin/*": ["bin/*"]
     }
   },
-  "include": ["utils/**/*", "routes/**/*"],
+  "include": ["src/**/*", "bin/**/*", "lib/**/*.ts", "test/**/*"],
   "exclude": ["node_modules"]
 }

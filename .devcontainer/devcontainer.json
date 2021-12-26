@@ -1,0 +1,29 @@
+{
+	"name": "Serverless",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/source",
+	"settings": {
+		"sqltools.connections": [{
+			"name": "Database",
+			"driver": "PostgreSQL",
+			"previewLimit": 50,
+			"server": "postgres",
+			"port": 5432,
+			"database": "postgres",
+			"username": "postgres",
+			"password": "postgres"
+		}]
+	},
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"skyapps.fish-vscode",
+		"ms-azuretools.vscode-docker",
+		"esbenp.prettier-vscode",
+		"mtxr.sqltools",
+		"mtxr.sqltools-driver-pg"
+	],
+	"forwardPorts": [3000],
+	"postCreateCommand": "npm i",
+	"remoteUser": "me"
+}
