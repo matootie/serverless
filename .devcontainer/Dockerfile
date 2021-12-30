@@ -4,9 +4,7 @@ FROM --platform=amd64 mcr.microsoft.com/vscode/devcontainers/javascript-node:0-$
 WORKDIR /source
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends fish
-
-RUN useradd -m -u 1999 -s /usr/bin/fish me
+    && apt-get -y install --no-install-recommends fish gnupg2
 
 RUN mkdir "/tmp/aws" && \
     cd "/tmp/aws" && \
@@ -15,8 +13,4 @@ RUN mkdir "/tmp/aws" && \
     unzip awscliv2.zip && \
     ./aws/install
 
-RUN chown -R me:npm /usr/local/share/npm-global
-
-USER me
-
-RUN npm i -g npm aws-cdk
+RUN su node -c "npm i -g npm aws-cdk"

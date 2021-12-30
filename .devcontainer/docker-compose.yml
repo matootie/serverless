@@ -10,7 +10,7 @@ services:
       - ..:/source:cached
       - ~/.aws:/home/me/.aws
     command: sleep infinity
-    user: me
+    user: node
     hostname: app
   postgres:
     image: postgres:latest

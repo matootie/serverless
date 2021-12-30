@@ -25,5 +25,5 @@
 	],
 	"forwardPorts": [3000],
 	"postCreateCommand": "npm i",
-	"remoteUser": "me"
+	"remoteUser": "node"
 }
