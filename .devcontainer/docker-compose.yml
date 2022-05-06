@@ -6,20 +6,23 @@ services:
       dockerfile: Dockerfile
       args:
         VARIANT: 14-bullseye
-    volumes:
-      - ..:/source:cached
-      - ~/.aws:/home/me/.aws
-    command: sleep infinity
-    user: node
+    init: true
     hostname: app
-  postgres:
-    image: postgres:latest
-    restart: unless-stopped
     volumes:
-      - postgres:/var/lib/postgresql/data
-    environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: postgres
+      - ..:/workspace:cached
+      - $HOME/.aws/credentials:/home/node/.aws/credentials:ro
+      - $HOME/.aws/config:/home/node/.aws/config:ro
+    command: sleep infinity
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath /var/lib/dynamodb/data/
+    restart: unless-stopped
+    network_mode: service:app
+    user: root
+    volumes:
+      - data:/var/lib/dynamodb/data
+  dynamodb-viewer:
+    image: taydy/dynamodb-manager
+    network_mode: service:app
 volumes:
-  postgres:
+  data: {}

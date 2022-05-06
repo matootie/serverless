@@ -1,29 +1,21 @@
 {
-	"name": "Serverless",
+	"name": "Serverless API",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-	"workspaceFolder": "/source",
+	"workspaceFolder": "/workspace",
 	"settings": {
-		"sqltools.connections": [{
-			"name": "Database",
-			"driver": "PostgreSQL",
-			"previewLimit": 50,
-			"server": "postgres",
-			"port": 5432,
-			"database": "postgres",
-			"username": "postgres",
-			"password": "postgres"
-		}]
 	},
 	"extensions": [
 		"dbaeumer.vscode-eslint",
 		"skyapps.fish-vscode",
-		"ms-azuretools.vscode-docker",
 		"esbenp.prettier-vscode",
-		"mtxr.sqltools",
-		"mtxr.sqltools-driver-pg"
 	],
-	"forwardPorts": [3000],
+	"forwardPorts": [3000, 8000, 80],
 	"postCreateCommand": "npm i",
-	"remoteUser": "node"
+	"remoteUser": "node",
+	"features": {
+		"git": "latest",
+		"github-cli": "latest",
+		"aws-cli": "latest",
+	}
 }

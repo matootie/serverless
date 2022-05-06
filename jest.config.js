@@ -14,4 +14,5 @@ module.exports = {
     }),
     "^jose/(.*)": "<rootDir>/node_modules/jose/dist/node/cjs/$1",
   },
+  setupFiles: ["<rootDir>/test/env.ts"],
 }

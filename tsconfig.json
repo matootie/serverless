@@ -13,11 +13,19 @@
     "lib": ["ES2018"],
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "@lib/*": ["lib/*"],
       "@bin/*": ["bin/*"],
-      "@app": ["src/app"]
+      "@app": ["src/app"],
+      "@config": ["config.json"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@processes/*": ["src/processes/*"],
+      "@providers/*": ["src/providers/*"],
+      "@routes/*": ["src/routes/*"],
+      "@schemas/*": ["src/schemas/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src/**/*", "bin/**/*", "lib/**/*.ts", "test/**/*"],

@@ -26,5 +26,6 @@ module.exports = {
     "no-var": "error",
     "prefer-const": "error",
     "no-console": "error",
+    "@typescript-eslint/no-explicit-any": "off",
   },
 }
