@@ -32,4 +32,5 @@ This template is a **WORK IN PROGRESS**.
 
 ### Goals
 
-- Custom domain name for API Gateway API.
+- Custom domain name for the API.
+- Configurable warmup to keep the Lambda warm.
