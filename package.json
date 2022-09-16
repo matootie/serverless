@@ -55,7 +55,7 @@
     "@vendia/serverless-express": "^4.8.0",
     "cors": "^2.8.5",
     "express": "^5.0.0-beta.1",
-    "jose": "^4.8.1",
+    "jose": "^4.9.2",
     "superstruct": "^0.15.4",
     "winston": "^3.7.2"
   }
