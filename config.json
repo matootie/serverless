@@ -1,5 +1,0 @@
-{
-  "cdkStackName": "AppStack",
-  "authExpectedIssuer": "MyAPIIssuer",
-  "authExpectedAudience": "MyAPIAudience"
-}

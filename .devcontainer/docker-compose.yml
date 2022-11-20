@@ -4,25 +4,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        VARIANT: 14-bullseye
     init: true
-    hostname: app
     volumes:
       - ..:/workspace:cached
-      - $HOME/.aws/credentials:/home/node/.aws/credentials:ro
-      - $HOME/.aws/config:/home/node/.aws/config:ro
+      - $HOME/.aws/credentials:/home/me/.aws/credentials:ro
+      - $HOME/.aws/config:/home/me/.aws/config:ro
     command: sleep infinity
-  dynamodb:
-    image: amazon/dynamodb-local:latest
-    command: -jar DynamoDBLocal.jar -sharedDb -dbPath /var/lib/dynamodb/data/
-    restart: unless-stopped
-    network_mode: service:app
-    user: root
-    volumes:
-      - data:/var/lib/dynamodb/data
-  dynamodb-viewer:
-    image: taydy/dynamodb-manager
-    network_mode: service:app
-volumes:
-  data: {}

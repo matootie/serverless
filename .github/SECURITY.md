@@ -6,4 +6,4 @@ You can find my email on [my GitHub profile](https://github.com/matootie).
 I appreciate you for your effort in disclosing the issue, and thus I will make
 every effort to acknowledge your contributions.
 
-Thank you ❤️
+Thank you
