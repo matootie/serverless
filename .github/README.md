@@ -2,8 +2,7 @@
 
 Using this template:
 
-- Update the stack name in `/packages/cdk/bin/cdk.ts`
-- (Optional) Update the region in `/packages/cdk/bin/cdk.ts`
+- Update the stack name, description and region in `/packages/cdk/bin/cdk.ts`
 - Update metadata files in `/.github` most importantly `FUNDING.yml`, `CODEOWNERS`, and `README.md`
 
 - Write your UI library in `/packages/ui`
