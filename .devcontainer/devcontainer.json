@@ -1,21 +1,27 @@
 {
-	"name": "Serverless API",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
-	"workspaceFolder": "/workspace",
-	"settings": {
-	},
-	"extensions": [
-		"dbaeumer.vscode-eslint",
-		"skyapps.fish-vscode",
-		"esbenp.prettier-vscode",
-	],
-	"forwardPorts": [3000, 8000, 80],
-	"postCreateCommand": "npm i",
-	"remoteUser": "node",
-	"features": {
-		"git": "latest",
-		"github-cli": "latest",
-		"aws-cli": "latest",
-	}
+  "name": "Serverless API",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "prettier.configPath": "config/.prettierrc.json"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "skyapps.fish-vscode",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "csstools.postcss"
+      ]
+    }
+  },
+  "postCreateCommand": "npm i",
+  "remoteUser": "me",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/git-lfs:1": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
+  }
 }

@@ -26,6 +26,6 @@ Outline steps to reproduce the behaviour.
 
 <!--
 
-Add any other context you feel necessary to illustrate the problem. Screenshots go a long way. If you don't feel anything is necessary, simply write N/A, or remove this section.
+Add any other context you feel necessary to illustrate the problem. Screenshots and screen recordings go a long way. If you don't feel anything is necessary, simply write N/A, or remove this section.
 
 -->

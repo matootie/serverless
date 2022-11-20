@@ -1,9 +1,3 @@
-ARG VARIANT=14-bullseye
-FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
+FROM ghcr.io/matootie/devcontainer:v1.2.0
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && \
-    apt-get -y install --no-install-recommends \
-        fish \
-        gnupg
-
-RUN su node -c "npm install -g npm aws-cdk"
+RUN su me -c "asdf plugin add nodejs && asdf install nodejs 16.18.0 && asdf global nodejs 16.18.0 && npm i -g npm"

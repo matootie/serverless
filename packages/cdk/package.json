@@ -1,0 +1,22 @@
+{
+  "name": "@app/cdk",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsup src/redirect.ts --format cjs && mkdir -p out && zip -j out/redirect.zip dist/redirect.js",
+    "deploy": "cdk deploy"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/aws-lambda": "^8.10.108",
+    "aws-cdk": "^2.51.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@app/api": "*",
+    "@app/client": "*",
+    "aws-cdk-lib": "^2.51.1",
+    "constructs": "^10.1.165",
+    "source-map-support": "^0.5.21"
+  }
+}

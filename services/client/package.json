@@ -1,0 +1,24 @@
+{
+  "name": "@app/client",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "vite build && mkdir -p out && cd dist/ && zip -r client.zip ./* && cd - && mv -v dist/client.zip out/client.zip",
+    "develop": "vite"
+  },
+  "devDependencies": {
+    "@app/tsconfig": "*",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "aws-cdk-lib": "^2.51.1",
+    "constructs": "^10.1.165",
+    "@vitejs/plugin-react": "^2.2.0",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4"
+  },
+  "dependencies": {
+    "@app/ui": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
