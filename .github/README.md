@@ -14,6 +14,6 @@ Using this template:
 
 ## Demo
 
-View a deployed demo of the template at [`d3slgoye2hovbp.cloudfront.net`](https://d3slgoye2hovbp.cloudfront.net)
+View a deployed demo of the template at [`d3ohu3yecjc5ag.cloudfront.net`](https://d3ohu3yecjc5ag.cloudfront.net)
 
-The API is accessible on [`/api/*`](https://d3slgoye2hovbp.cloudfront.net/api), the client is accessible on all other endpoints.
+The API is accessible on [`/api/*`](https://d3ohu3yecjc5ag.cloudfront.net/api), the client is accessible on all other endpoints.
