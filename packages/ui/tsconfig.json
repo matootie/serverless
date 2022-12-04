@@ -1,7 +1,12 @@
 {
   "extends": "@app/tsconfig/react-library.json",
   "compilerOptions": {
-    "lib": ["DOM", "ES2015"]
+    "lib": ["DOM", "ES2015"],
+    "baseUrl": ".",
+    "paths": {
+      "#styles": ["src/index.css"],
+      "#components/*": ["src/components/*"]
+    }
   },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]

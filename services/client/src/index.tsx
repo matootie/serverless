@@ -1,9 +1,9 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
-function App() {
-  return <p>Hello, client!</p>
-}
+import App from "#app"
+
+import "@app/ui/styles"
 
 const root = document.getElementById("root")
 if (!root) throw new Error("Missing root")

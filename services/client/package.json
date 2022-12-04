@@ -10,11 +10,12 @@
     "@app/tsconfig": "*",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^2.2.0",
     "aws-cdk-lib": "^2.51.1",
     "constructs": "^10.1.165",
-    "@vitejs/plugin-react": "^2.2.0",
     "typescript": "^4.9.3",
-    "vite": "^3.2.4"
+    "vite": "^3.2.4",
+    "vite-tsconfig-paths": "^3.6.0"
   },
   "dependencies": {
     "@app/ui": "*",

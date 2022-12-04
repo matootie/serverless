@@ -1,3 +1,3 @@
-export const Booga = () => {
-  return <p>Ooga!</p>
-}
+import "./index.css"
+import "@fontsource/inter/latin.css"
+export * from "#components/Card"
